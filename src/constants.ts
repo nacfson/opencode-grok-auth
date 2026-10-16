@@ -1,5 +1,6 @@
-export const PROVIDER_ID = "xai-oauth";
-export const PROVIDER_NAME = "xAI Grok OAuth";
+export const INTEGRATION_ID = "xai";
+export const OAUTH_METHOD_ID = "browser-pkce";
+export const OAUTH_METHOD_LABEL = "SuperGrok Subscription (browser)";
 
 export const XAI_API_BASE_URL = "https://api.x.ai/v1";
 export const XAI_OAUTH_ISSUER = "https://auth.x.ai";
@@ -14,12 +15,4 @@ export const XAI_OAUTH_REDIRECT_HOST = "127.0.0.1";
 export const XAI_OAUTH_REDIRECT_PORT = 56121;
 export const XAI_OAUTH_REDIRECT_PATH = "/callback";
 
-export const XAI_ACCESS_TOKEN_REFRESH_SKEW_MS = 120_000;
 export const OAUTH_CALLBACK_TIMEOUT_MS = 180_000;
-
-export const DEFAULT_XAI_MODELS = [
-  "grok-4.3",
-  "grok-4.20-0309-reasoning",
-  "grok-4.20-0309-non-reasoning",
-  "grok-4.20-multi-agent-0309",
-] as const;

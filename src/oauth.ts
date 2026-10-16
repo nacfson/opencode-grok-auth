@@ -1,6 +1,5 @@
 import crypto from "node:crypto";
 import {
-  PROVIDER_ID,
   XAI_OAUTH_AUTHORIZE_URL,
   XAI_OAUTH_CLIENT_ID,
   XAI_OAUTH_DISCOVERY_URL,
@@ -227,18 +226,4 @@ export function createOAuthState(): string {
 
 export function createOAuthNonce(): string {
   return crypto.randomBytes(24).toString("hex");
-}
-
-export function tokenResultToAuthResult(input: {
-  accessToken: string;
-  refresh: string;
-  expiresAt: number;
-}) {
-  return {
-    type: "success" as const,
-    provider: PROVIDER_ID,
-    refresh: input.refresh,
-    access: input.accessToken,
-    expires: input.expiresAt,
-  };
 }

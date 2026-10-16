@@ -1,15 +1,10 @@
 export {
   XaiGrokOAuthPlugin,
-  createXaiGrokOAuthPlugin,
+  createXaiOAuthMethodRegistration,
   default,
 } from "./src/plugin.js";
 
-export {
-  accessTokenExpired,
-  calculateTokenExpiry,
-  packXaiRefresh,
-  parseXaiRefresh,
-} from "./src/auth.js";
+export { calculateTokenExpiry, getJwtExpiry } from "./src/auth.js";
 
 export {
   buildXaiAuthorizeUrl,
